@@ -18,8 +18,10 @@ $(document).ready(function () {
 
     var sv = snapshot.val();
 
-    console.log(sv.userName);
-    console.log(sv.email);
+
+    $("#loginemail").text(sv.email);
+    //console.log(sv.username);
+    //console.log(sv.email);
 
 
   })
@@ -27,16 +29,21 @@ $(document).ready(function () {
     event.preventDefault();
     userName = $("#user").val().trim();
     email = $("#email").val().trim();
+
     //console.log(userName);
     //console.log(email);
+    if (userName === "" || email === "") {
+      console.log("please type in an email and username");
 
+    }
+    else {
 
-    database.ref().push({
-      username: userName,
-      email: email,
-      dateAdded: firebase.database.ServerValue.TIMESTAMP
+      database.ref().push({
+        username: userName,
+        email: email,
+        dateAdded: firebase.database.ServerValue.TIMESTAMP
 
-    });
-
+      });
+    }
   });
 })
