@@ -9,7 +9,7 @@ var config = {
 firebase.initializeApp(config);
 
 var database = firebase.database();
-$(document).ready(function () {
+$(document).ready(function(){
 
 
   var userName = "";
@@ -17,8 +17,10 @@ $(document).ready(function () {
   database.ref().on("child_added", function (snapshot) {
 
     var sv = snapshot.val();
-
-    console.log(sv.userName);
+    
+    $("#user").text(sv.username);
+    $("#email").text(sv.email);
+    console.log(sv.username);
     console.log(sv.email);
 
 
