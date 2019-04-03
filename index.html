@@ -57,20 +57,28 @@
 
   <!-- YouTube API -->
   <script src="https://apis.google.com/js/api.js"></script>
-<title>search</title>
+  <title>search</title>
 
-    
+
 </head>
+
 <body>
   <nav class="white" role="navigation">
     <div class="nav-wrapper container">
-      <a id="logo-container" href="#" class="brand-logo">Game Tinder</a>
+      <a id="logo-container" href="#" class="brand-logo"><img src="assets/Images/GameTinder Logo.png"
+          style="width: 300px;"></a>
       <ul class="right hide-on-med-and-down">
-        <li><a href="#">Navbar Link</a></li>
+        <li class="logged-out"><a href="#""grey-text modal-trigger" data-target="modal-login">Log In</a></li>
+        <li class="logged-in"><a href="#""grey-text modal-trigger" data-target="modal-favorites">Favorites</a></li>
+        <li class="logged-out"><a href="#""grey-text modal-trigger" data-target="modal-signup">Sign Up</a></li>
+        <li class="logged-in"><a href="#""grey-text modal-trigger" data-target="modal-logout">Log Out</a></li>
       </ul>
 
       <ul id="nav-mobile" class="sidenav">
-        <li><a href="#">Navbar Link</a></li>
+        <li class="logged-out"><a href="#""grey-text modal-trigger" data-target="modal-login">Log In</a></li>
+        <li class="logged-in"><a href="#""grey-text modal-trigger" data-target="modal-favorites">Favorites</a></li>
+        <li class="logged-out"><a href="#""grey-text modal-trigger" data-target="modal-signin">Sign Up</a></li>
+        <li class="logged-in"><a href="#""grey-text modal-trigger" data-target="modal-logout">Log Out</a></li>
       </ul>
       <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
     </div>
@@ -84,13 +92,49 @@
         <div class="row center">
           <h5 class="header col s12 light">A game search engine tailored for you!</h5>
         </div>
-        
-          
-              <input type="text" class="form-control" id="search" placeholder="Search Games Here">
-          
+
+        <!--Sign Up Modal-->
+
+        <div id="modal-signup" class="modal">
+          <div class"modal-content">
+            <h4>Sign Up</h4><br />
+            <form id="signup-form">
+              <div class="input-field col s12">
+                <input id="signup-email" type="email" class="validate">
+                <label for="signup-email">Email</label>
+              </div>
+              <div class="input-field col s12">
+                <input id="password" type="password" class="validate">
+                <label for="signup-password">Choose Password</label>
+              </div>
+            </form>
+          </div>
+        </div>
+
+        <!---Login Modal-->
+        <div id="modal-login" class="modal">
+          <div class"modal-content">
+            <h4>Log In</h4><br />
+            <form id="login-form">
+              <div class="input-field col s12">
+                <input id="login-email" type="email" class="validate">
+                <label for="login-email">Email</label>
+              </div>
+              <div class="input-field col s12">
+                <input id="password" type="password" class="validate">
+                <label for="login-password">Password</label>
+              </div>
+            </form>
+          </div>
+        </div>
+
+
+        <input type="text" class="form-control" id="search" placeholder="Search Games Here">
+
 
         <div class="row right">
-          <a href="http://materializecss.com/getting-started.html" id="searchbutton" class="btn-large waves-effect waves-light teal lighten-1">Search</a>
+          <a href="http://materializecss.com/getting-started.html" id="searchbutton"
+            class="btn-large waves-effect waves-light teal lighten-1">Search</a>
         </div>
         <br><br>
 
@@ -104,7 +148,7 @@
     <div class="section">
 
       <!--   Icon Section   -->
-      <div class="row" id ="appear-here"> 
+      <div class="row" id="appear-here">
 
       </div>
 
@@ -130,7 +174,7 @@
         <div class="col s12 center">
           <h3><i class="mdi-content-send brown-text"></i></h3>
           <h4>Contact Us</h4>
-          <p class="left-align light" id = "appear-here"></p>
+          <p class="left-align light" id="appear-here"></p>
         </div>
       </div>
 
@@ -154,24 +198,26 @@
       <div class="row">
         <div class="col s12 center">
           <h3><i class="mdi-content-send brown-text"></i></h3>
-          
-          <p class="left-align light" id ="youtube-appear-here"></p>
+
+          <p class="left-align light" id="youtube-appear-here"></p>
         </div>
       </div>
 
     </div>
   </div>
 
-  
 
 
-  
+
+
   <footer class="page-footer teal">
     <div class="container">
       <div class="row">
         <div class="col l6 s12">
           <h5 class="white-text">Company Bio</h5>
-          <p class="grey-text text-lighten-4">We are a team of college students working on this project like it's our full time job. Any amount would help support and continue development on this project and is greatly appreciated.</p>
+          <p class="grey-text text-lighten-4">We are a team of college students working on this project like it's our
+            full time job. Any amount would help support and continue development on this project and is greatly
+            appreciated.</p>
 
 
         </div>
@@ -197,22 +243,22 @@
     </div>
     <div class="footer-copyright">
       <div class="container">
-      Made by <a class="brown-text text-lighten-3" href="http://materializecss.com">Materialize</a>
+        Made by <a class="brown-text text-lighten-3" href="http://materializecss.com">Materialize</a>
       </div>
     </div>
   </footer>
 
 
 
-<!-- <div class="row" id="appear-here"> -->
+  <!-- <div class="row" id="appear-here"> -->
 
-<!-- </div> -->
-
-
+  <!-- </div> -->
 
 
-<!-- YouTube js -->
-<script src="./assets/javascript/youtubeapi.js"></script>
+
+
+  <!-- YouTube js -->
+  <script src="./assets/javascript/youtubeapi.js"></script>
 </body>
 
 </html>
