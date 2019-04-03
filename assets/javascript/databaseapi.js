@@ -31,7 +31,7 @@ $(document).ready(function () {
         "format": "jsonp",
       }
     }).then(function (response) {
-      //console.log(response.results);
+      console.log(response.results);
       var results = response.results;
       //console.log(results)
       $("#appear-here").empty();

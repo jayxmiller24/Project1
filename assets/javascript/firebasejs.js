@@ -14,38 +14,38 @@ $(document).ready(function () {
 
 
 
-  var userName = "";
-  var email = "";
-  database.ref().on("child_added", function (snapshot) {
+  // var userName = "";
+  // var email = "";
+  // database.ref().on("child_added", function (snapshot) {
 
-    var sv = snapshot.val();
-
-
-    $("#loginemail").text(sv.email);
-    //console.log(sv.username);
-    //console.log(sv.email);
+  //   var sv = snapshot.val();
 
 
-  })
-  $("#signup").on("click", function (event) {
-    event.preventDefault();
-    userName = $("#user").val().trim();
-    email = $("#email").val().trim();
+  //   $("#loginemail").text(sv.email);
+  //   //console.log(sv.username);
+  //   //console.log(sv.email);
 
-    //console.log(userName);
-    //console.log(email);
-    if (userName === "" || email === "") {
-      console.log("please type in an email and username");
 
-    }
-    else {
+  // })
+  // $("#signup").on("click", function (event) {
+  //   event.preventDefault();
+  //   userName = $("#user").val().trim();
+  //   email = $("#email").val().trim();
 
-      database.ref().push({
-        username: userName,
-        email: email,
-        dateAdded: firebase.database.ServerValue.TIMESTAMP
+  //   //console.log(userName);
+  //   //console.log(email);
+  //   if (userName === "" || email === "") {
+  //     console.log("please type in an email and username");
 
-      });
-    }
-  });
+  //   }
+  //   else {
+
+  //     database.ref().push({
+  //       username: userName,
+  //       email: email,
+  //       dateAdded: firebase.database.ServerValue.TIMESTAMP
+
+  //     });
+  //   }
+  // });
 })
