@@ -10,10 +10,8 @@ firebase.initializeApp(config);
 
 var database = firebase.database();
 
-// firebase auth varible
-var auth = firebase.auth();
-
 $(document).ready(function () {
+
 
 
   var userName = "";
