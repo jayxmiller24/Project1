@@ -5,6 +5,10 @@
  *
  * Made By MaterializeCSS.com
  */
+.card-img-top{
+ height: 250px;
+ width: 250px;
+}
 
 nav ul a,
 nav .brand-logo {
