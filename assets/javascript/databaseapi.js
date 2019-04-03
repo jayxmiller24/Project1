@@ -1,18 +1,6 @@
 $(document).ready(function () {
 
-
-  //var gameUrl = "https://www.giantbomb.com/api/search/";
-  //var apiKey = "2c81a4645598e2c114827c1fef8965cdd7309c04";
-  //var apiKeyParameter = "?api_key="
-  //var searchParameters = "&query="
-  //var game = ""
-  //var gameParameters = "&format=JSON"
-  //var resources = "&resources=game"
-  //var queryUrl = gameUrl + apiKeyParameter + apiKey + gameParameters + searchParameters + game + resources;
-
   $("#search").keypress(function (event) {
-
-
 
     var keycode = (event.keyCode ? event.keyCode : event.which);
 
@@ -80,7 +68,7 @@ $(document).ready(function () {
         gameDiv.append(title)
         //gameDiv2.append(pThree);
         gameDiv.append(pThree);
-        
+
 
 
 
