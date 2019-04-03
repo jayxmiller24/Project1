@@ -5,38 +5,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <!-- Firebase  -->
-    <script src="https://www.gstatic.com/firebasejs/5.9.2/firebase.js"></script>
-    <!-- Firebase Auth -->
-    <script src="https://www.gstatic.com/firebasejs/5.9.2/firebase-auth.js"></script>
-    <script src="https://cdn.firebase.com/libs/firebaseui/3.5.1/firebaseui.js"></script>
-    <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.5.1/firebaseui.css" />
-
-
     <!-- Bootstrap Library -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- Firebase UI-->
+    <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.5.1/firebaseui.css" />
+    <!-- App CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">    
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-        crossorigin="anonymous"></script>
-    <!--CSS Style Page-->
-    <link rel="stylesheet" href="assets/css/style.css">
-
-    <!-- firebase -->
-    <script src="assets/javascript/firebasejs.js"></script>
-    
-
-    <title>index</title>
 </head>
 
 <body>
-
-    
-        
-
         <h1><img src="assets/Images/GameTinder Logo.png" alt="Logo"></h1>
 
 
@@ -48,20 +27,20 @@
             </div>
         <div class="row">
             <div class="col-md-5">
-                <form role="form" method="post" action="register.php">
+                <form id="signup-form" role="form">
                     <fieldset>
                         <p class="text-uppercase pull-center"> SIGN UP!</p>
                         <div class="form-group">
-                            <input type="text" name="username" id="user" class="form-control input-lg"
-                                placeholder="Username">
+                            <input type="email" name="signup-email" id="signup-email" class="form-control input-lg"
+                                placeholder="Email address">
                         </div>
 
                         <div class="form-group">
-                            <input type="email" name="email" id="email" class="form-control input-lg"
-                                placeholder="Email Address">
+                            <input type="password" name="signup-password" id="signup-password" class="form-control input-lg"
+                                placeholder="Enter a 6 digit password">
                         </div>
                         <div>
-                            <button type="submit" class="btn btn-lg btn-primary" id="signup">Sign Up!</button>
+                            <button type="submit" class="btn btn-lg btn-primary" id="submit">Sign Up!</button>
                         </div>
                     </fieldset>
                 </form>
@@ -96,8 +75,26 @@
             </div>
         </div>
     </div>
-    <!-- YouTube js -->
-    <script src="./assets/javascript/youtubeapi.js"></script>
+    <!-- Firebase  -->
+    <script src="https://www.gstatic.com/firebasejs/5.9.2/firebase.js"></script>
+    <!-- <script src="https://www.gstatic.com/firebasejs/5.9.2/firebase-app.js"></script> -->
+    <!-- <script src="https://www.gstatic.com/firebasejs/5.9.2/firebase-database.js"></script> -->
+    
+    <!-- Firebase Auth -->
+    <!-- <script src="https://www.gstatic.com/firebasejs/5.9.2/firebase-auth.js"></script> -->
+    <!-- <script src="https://cdn.firebase.com/libs/firebaseui/3.5.1/firebaseui.js"></script> -->
+    
+    <!-- JQuery, Popper, Bootstrap -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <!-- firebase Inti-->
+    <script src="./assets/javascript/firebasejs.js"></script>
+    <!-- Auth js -->
+    <script src="./assets/javascript/auth.js"></script>
+
 </body>
 
 </html>
