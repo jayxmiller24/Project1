@@ -2,98 +2,183 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <!-- Firebase  -->
-    <script src="https://www.gstatic.com/firebasejs/5.9.2/firebase.js"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <!-- bootstrap -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+  <script src="./assets/javascript/databaseapi.js"></script>
+  <!--materialize css  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="assets/css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection" />
+  <link href="assets/css/style.css" type="text/css" rel="stylesheet" media="screen,projection" />
+  <!-- Materialize js -->
+  <script src="assets/javascript/init.js"></script>
+  <script src="assets/javascript/materialize.min.js"></script>
+  <script src="assets/javascript/materialize.js"></script>
 
-    <!-- AOS Library -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-
-    <!-- Bootstrap Library -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <link rel="stylesheet" href="assets/css/style.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-        crossorigin="anonymous"></script>
-
-    <!-- YouTube API -->
-    <script src="https://apis.google.com/js/api.js"></script>
-    <!-- firebase -->
-    <script src="assets/javascript/firebasejs.js"></script>
-    <!-- aos script -->
-
-    <title>index</title>
+  <!-- YouTube API -->
+  <script src="https://apis.google.com/js/api.js"></script>
+<title>search</title>
 </head>
-
 <body>
+  <nav class="white" role="navigation">
+    <div class="nav-wrapper container">
+      <a id="logo-container" href="#" class="brand-logo">Game Tinder</a>
+      <ul class="right hide-on-med-and-down">
+        <li><a href="#">Navbar Link</a></li>
+      </ul>
 
-    
-        
-
-        <h1><img src="assets/Images/GameTinder Logo.png" alt="Logo"></h1>
-
-
-        <hr>
-        <div class="container">
-        <div class="row">
-            <div class="col-md-5">
-                <form role="form" method="post" action="register.php">
-                    <fieldset>
-                        <p class="text-uppercase pull-center"> SIGN UP!</p>
-                        <div class="form-group">
-                            <input type="text" name="username" id="user" class="form-control input-lg"
-                                placeholder="Username">
-                        </div>
-
-                        <div class="form-group">
-                            <input type="email" name="email" id="email" class="form-control input-lg"
-                                placeholder="Email Address">
-                        </div>
-                        <div>
-                            <button type="submit" class="btn btn-lg btn-primary" id="signup">Sign Up!</button>
-                        </div>
-                    </fieldset>
-                </form>
-            </div>
-
-            <div class="col-md-2">
-                <!-------null------>
-            </div>
-
-            <div class="col-md-5">
-                <form role="form">
-                    <fieldset>
-                        <p class="text-uppercase"> Login using your account: </p>
-
-                        <div class="form-group">
-                            <input type="email" name="username" id="userlogin" class="form-control input-lg"
-                                placeholder="Username">
-                        </div>
-                        <div class="form-group">
-                            <input type="email" name="email" id="loginemail" class="form-control input-lg"
-                                placeholder="Email">
-                        </div>
-                        <div>
-                            <button type="submit" class="btn btn-lg btn-primary" id="login">Log In!</button>
-                        </div>
-                        
-
-                        </div>
-
-                    </fieldset>
-                </form>
-            </div>
-        </div>
+      <ul id="nav-mobile" class="sidenav">
+        <li><a href="#">Navbar Link</a></li>
+      </ul>
+      <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
     </div>
-    <!-- YouTube js -->
-    <script src="./assets/javascript/youtubeapi.js"></script>
+  </nav>
+
+  <div id="index-banner" class="parallax-container">
+    <div class="section no-pad-bot">
+      <div class="container">
+        <br><br>
+        <h1 class="header center teal-text text-lighten-2">Game Tinder</h1>
+        <div class="row center">
+          <h5 class="header col s12 light">A game search engine tailored for you!</h5>
+        </div>
+        
+          
+              <input type="text" class="form-control" id="search" placeholder="Search Games Here">
+          
+
+        <div class="row right">
+          <a href="http://materializecss.com/getting-started.html" id="searchbutton" class="btn-large waves-effect waves-light teal lighten-1">Search</a>
+        </div>
+        <br><br>
+
+      </div>
+    </div>
+    <div class="parallax"><img src="assets/Images/Mario.jpg" alt="Mario"></div>
+  </div>
+
+
+  <div class="container">
+    <div class="section">
+
+      <!--   Icon Section   -->
+      <div class="row" id ="appear-here"> 
+
+      </div>
+
+    </div>
+  </div>
+
+
+  <div class="parallax-container valign-wrapper">
+    <div class="section no-pad-bot">
+      <div class="container">
+        <div class="row center">
+          <h5 class="header col s12 light">A modern responsive front-end framework based on Material Design</h5>
+        </div>
+      </div>
+    </div>
+    <div class="parallax"><img src="assets/Images/controller.jpg" alt="controller"></div>
+  </div>
+
+  <div class="container">
+    <div class="section">
+
+      <div class="row">
+        <div class="col s12 center">
+          <h3><i class="mdi-content-send brown-text"></i></h3>
+          <h4>Contact Us</h4>
+          <p class="left-align light" id = "appear-here"></p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="parallax-container valign-wrapper">
+    <div class="section no-pad-bot">
+      <div class="container">
+        <div class="row center">
+          <h5 class="header col s12 light">A modern responsive front-end framework based on Material Design</h5>
+        </div>
+      </div>
+    </div>
+    <div class="parallax"><img src="assets/Images/gaming.jpg" alt="Gaming Machines"></div>
+  </div>
+
+  <div class="container">
+    <div class="section">
+
+      <div class="row">
+        <div class="col s12 center">
+          <h3><i class="mdi-content-send brown-text"></i></h3>
+          
+          <p class="left-align light" id ="youtube-appear-here"></p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  
+
+
+  
+  <footer class="page-footer teal">
+    <div class="container">
+      <div class="row">
+        <div class="col l6 s12">
+          <h5 class="white-text">Company Bio</h5>
+          <p class="grey-text text-lighten-4">We are a team of college students working on this project like it's our full time job. Any amount would help support and continue development on this project and is greatly appreciated.</p>
+
+
+        </div>
+        <div class="col l3 s12">
+          <h5 class="white-text">Settings</h5>
+          <ul>
+            <li><a class="white-text" href="#!">Link 1</a></li>
+            <li><a class="white-text" href="#!">Link 2</a></li>
+            <li><a class="white-text" href="#!">Link 3</a></li>
+            <li><a class="white-text" href="#!">Link 4</a></li>
+          </ul>
+        </div>
+        <div class="col l3 s12">
+          <h5 class="white-text">Connect</h5>
+          <ul>
+            <li><a class="white-text" href="#!">Link 1</a></li>
+            <li><a class="white-text" href="#!">Link 2</a></li>
+            <li><a class="white-text" href="#!">Link 3</a></li>
+            <li><a class="white-text" href="#!">Link 4</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <div class="container">
+      Made by <a class="brown-text text-lighten-3" href="http://materializecss.com">Materialize</a>
+      </div>
+    </div>
+  </footer>
+
+
+
+<!-- <div class="row" id="appear-here"> -->
+
+<!-- </div> -->
+
+
+
+
+<!-- YouTube js -->
+<script src="./assets/javascript/youtubeapi.js"></script>
 </body>
 
 </html>

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- Firebase  -->
+    <script src="https://www.gstatic.com/firebasejs/5.9.2/firebase.js"></script>
+    <!-- Firebase Auth -->
+    <script src="https://www.gstatic.com/firebasejs/5.9.2/firebase-auth.js"></script>
+    <script src="https://cdn.firebase.com/libs/firebaseui/3.5.1/firebaseui.js"></script>
+    <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.5.1/firebaseui.css" />
+
+
+    <!-- Bootstrap Library -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+
+
+    <!-- firebase -->
+    <script src="assets/javascript/firebasejs.js"></script>
+    
+
+    <title>index</title>
+</head>
+
+<body>
+
+    
+        
+
+        <h1><img src="assets/Images/GameTinder Logo.png" alt="Logo"></h1>
+
+
+        <hr>
+        <div class="container">
+            <div class="row">
+                <div id="firebaseui-auth-container"></div>
+                <div id="loader">Loading...</div>
+            </div>
+        <div class="row">
+            <div class="col-md-5">
+                <form role="form" method="post" action="register.php">
+                    <fieldset>
+                        <p class="text-uppercase pull-center"> SIGN UP!</p>
+                        <div class="form-group">
+                            <input type="text" name="username" id="user" class="form-control input-lg"
+                                placeholder="Username">
+                        </div>
+
+                        <div class="form-group">
+                            <input type="email" name="email" id="email" class="form-control input-lg"
+                                placeholder="Email Address">
+                        </div>
+                        <div>
+                            <button type="submit" class="btn btn-lg btn-primary" id="signup">Sign Up!</button>
+                        </div>
+                    </fieldset>
+                </form>
+            </div>
+
+            <div class="col-md-2">
+                <!-------null------>
+            </div>
+
+            <div class="col-md-5">
+                <form role="form">
+                    <fieldset>
+                        <p class="text-uppercase"> Login using your account: </p>
+
+                        <div class="form-group">
+                            <input type="email" name="username" id="userlogin" class="form-control input-lg"
+                                placeholder="Username">
+                        </div>
+                        <div class="form-group">
+                            <input type="email" name="email" id="loginemail" class="form-control input-lg"
+                                placeholder="Email">
+                        </div>
+                        <div>
+                            <button type="submit" class="btn btn-lg btn-primary" id="login">Log In!</button>
+                        </div>
+                        
+
+                        </div>
+
+                    </fieldset>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- YouTube js -->
+    <script src="./assets/javascript/youtubeapi.js"></script>
+</body>
+
+</html>

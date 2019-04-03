@@ -9,7 +9,10 @@ var config = {
 firebase.initializeApp(config);
 
 var database = firebase.database();
+
+
 $(document).ready(function () {
+
 
 
   var userName = "";
