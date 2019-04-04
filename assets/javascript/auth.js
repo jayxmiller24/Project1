@@ -34,16 +34,50 @@ var auth = firebase.auth();
 var signupForm = document.querySelector('#signup-form');
 signupForm.addEventListener('submit', function(){
     event.preventDefault();
-    const email = signupForm['signup-email'].value;
-    const password = signupForm['signup-password'].value;
+    //get user info
+    const email = signupForm['sign-email'].value;
+    const password = signupForm['sign-password'].value;
     console.log(email, password);
     
-    // create user with auth
+    // sign up the user
     auth.createUserWithEmailAndPassword(email, password)
         .then(function (credential){
             console.log(credential.user);
-            signupForm.reset();
-            // M.Modal(#).close();
+            const modal = document.querySelector('#modal-signup')
+            M.Modal.getInstance(modal).close();
+            signupForm.reset(); 
+        });
+});
+ 
+// logout user from the app
+const logout = document.querySelector('#logout');
+logout.addEventListener('click', function() {
+    event.preventDefault();
+    auth.signOut()
+        .then(() =>  {
+            console.log("user signed out");
         });
 });
 
+// log user in
+const loginForm = document.querySelector('#login-form');
+loginForm.addEventListener('Submit', function() {
+    event.preventDefault();
+
+    // get user input
+    const email = loginForm['login-email'].value;
+    const password = loginForm['login-password'].value;
+    console.log(email, password);
+
+    //sign user in
+    auth.signInWithEmailAndPassword(email, password)
+        .then(function (credential){
+            console.log(credential.user);
+            // close login modal and reset form
+            const modal = document.querySelector('#modal-login')
+            M.Modal.getInstance(modal).close();
+            loginForm.reset();
+            
+        })
+        
+})

@@ -14,11 +14,9 @@ $(document).ready(function () {
   $("#searchbutton").on("click", function (event) {
     event.preventDefault();
 
-    var searchTerm = $("#search").val()
+    var searchTerm = $("#search").val();
     //console.log(searchTerm);
     displayInfo(searchTerm);
-
-
 
   });
 
