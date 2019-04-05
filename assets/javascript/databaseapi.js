@@ -1,5 +1,5 @@
 $(document).ready(function () {
-
+ 
   $("#search").keypress(function (event) {
 
     var keycode = (event.keyCode ? event.keyCode : event.which);
@@ -34,38 +34,41 @@ $(document).ready(function () {
         "format": "jsonp",
       }
     }).then(function (response) {
-      console.log(response.results);
+      //console.log(response.results);
       var results = response.results;
       //console.log(results)
       $("#appear-here").empty();
+      var count= 0;
+      var descount = 0;
+      var titleCount= 0;
       for (var i = 0; i < results.length; i++) {
-
-
-        var gameDiv = $("<div class='card'>");
-        gameDiv.attr("style", "width: 18rem")
-        var title = $("<h6>").text(results[i].name)
-        //title.addClass("card-title");
-        //var gameDiv2 = ("<div class='card-body'>");
-
-
-        //var rating = original_game_rating[0].name
-        //var pOne = $("<p>").text("Rating: " + rating)
-
+        count++
+        descount++
+        titleCount++
+        var gameDiv = $("<div class='col s3 card left'>");
+        gameDiv.attr("style", );
+        var title = $("<h6>").text(results[i].name);
+        title.attr("id", "title" + titleCount);
+        
         var pThree = $("<p>");
         $(pThree).text("Description: " + results[i].deck);
         pThree.addClass("card-text");
+        pThree.attr("id", "description"+ descount);
+
 
         var gameImage = $("<img>");
 
-        gameImage.attr({ src: results[i].image.medium_url, class: "card-img-top" });
+        gameImage.attr({ src: results[i].image.medium_url, class: "card-image"  });
+        gameImage.attr("id", "game"+ count)
+        gameImage.addClass("game-image");
 
-
-        ;
-        //gameDiv.prepend(pOne)
+        
+        
         gameDiv.append(gameImage);
         gameDiv.append(title)
-        //gameDiv2.append(pThree);
+        
         gameDiv.append(pThree);
+        
 
 
 
@@ -80,6 +83,19 @@ $(document).ready(function () {
 
     });
 
-  }
-  displayInfo();
+
+  };
+ 
+  /*$(document).on("click", "#game", function(){
+    this.show();
+    const gameName= $(this).prop(id)
+    console.log(gameName);
+    
+    const image = $(gameImage)
+
+
+
+  });*/
+  
+  
 });
