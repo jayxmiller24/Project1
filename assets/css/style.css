@@ -5,15 +5,17 @@
  *
  * Made By MaterializeCSS.com
  */
-.card-img-top{
- height: 250px;
- width: 250px;
+.card-image{
+ height: 200px;
+ width: 200px;
 }
 
+  
 .card{
-  margin:25px;
+  height: 400px;
+  margin: 5px;
+  overflow: scroll;
 }
-
 nav ul a,
 nav .brand-logo {
   color: #444;
@@ -63,9 +65,15 @@ p {
 footer.page-footer {
   margin: 0;
 }
-/* .modal {
-  overflow-y: hidden;
-} */
+.modal{
+ top: 0
+  /* overflow-y: hidden; */
+  
+}
+.modal img{
+  height: 200px;
+  width: 200px;
+}
 button {
   width: 100%;
 }
