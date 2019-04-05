@@ -69,3 +69,21 @@ footer.page-footer {
 button {
   width: 100%;
 }
+
+#search {
+  color: white;
+
+}
+
+#title {
+  font-family: 'VT323', monospace;
+  font-size: 200px;
+  text-align: left;
+ 
+}
+
+#smallTitle {
+  font-family: 'VT323', monospace;
+
+}
+}
