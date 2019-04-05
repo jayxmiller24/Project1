@@ -45,8 +45,5 @@ $(document).on("click", ".card", function(){
 
   });
 
-   
-
-});
 
 
