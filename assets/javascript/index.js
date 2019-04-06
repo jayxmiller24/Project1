@@ -22,8 +22,6 @@ $(document).on("click", ".card-panel", function(){
     // console.log(cardImage);
     // console.log(mainTitle);
     // console.log(mainP);
-    
-    
 
     var imgSource = $(cardImage).attr("src");
     console.log(imgSource);
@@ -39,7 +37,7 @@ $(document).on("click", ".card-panel", function(){
    $("#game p").text(mainP);
     
 
-//    console.log(mainTitle);
+    //console.log(mainTitle);
    
    const searchOBJ = searchQuery(mainTitle);
    $.getJSON(searchOBJ.queryURL, searchOBJ.options, function(data) {
@@ -65,15 +63,9 @@ $(document).on("click", ".card-panel", function(){
         newheader.text(vidTitle);
         newDiv.append(newheader);
         modalDiv.append(newDiv);
-    
     });
   });
-
-
-
     $("#game").show();
-
-
   });
 
 
