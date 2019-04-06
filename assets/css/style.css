@@ -8,13 +8,17 @@
 .card-image{
  height: 200px;
  width: 200px;
+
 }
 
+.hide {
+  display: none !important;
+}
   
-.card{
-  height: 400px;
+.card-panel{
+  height: 300px;
   margin: 5px;
-  overflow: scroll;
+  /*overflow: scroll;*/
 }
 nav ul a,
 nav .brand-logo {
@@ -112,3 +116,4 @@ text-align: center;
   color: darkorange;
   font-size: 100px;
 }
+
