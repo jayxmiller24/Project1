@@ -41,18 +41,23 @@ $(document).ready(function () {
       var count= 0;
       var descount = 0;
       var titleCount= 0;
+      var favoriteCount =0;
       for (var i = 0; i < results.length; i++) {
         count++
         descount++
         titleCount++
-        var gameDiv = $("<div class='col s3 card left'>");
+        favoriteCount++
+        var gameDiv = $("<div class='col s3 card-panel hoverable'>");
         gameDiv.attr("style", );
         var title = $("<h6>").text(results[i].name);
+        
         title.attr("id", "title" + titleCount);
+        var favoriteHeart=$("<i>")
+        favoriteHeart.addClass("material-icons")
         
         var pThree = $("<p>");
         $(pThree).text("Description: " + results[i].deck);
-        pThree.addClass("card-text");
+        pThree.addClass("card-text truncate");
         pThree.attr("id", "description"+ descount);
 
 
@@ -65,6 +70,7 @@ $(document).ready(function () {
         
         
         gameDiv.append(gameImage);
+        gameDiv.append(favoriteHeart);
         gameDiv.append(title)
         
         gameDiv.append(pThree);
@@ -85,17 +91,6 @@ $(document).ready(function () {
 
 
   };
- 
-  /*$(document).on("click", "#game", function(){
-    this.show();
-    const gameName= $(this).prop(id)
-    console.log(gameName);
-    
-    const image = $(gameImage)
-
-
-
-  });*/
   
   
 });
