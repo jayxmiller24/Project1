@@ -1,23 +1,17 @@
 $(document).ready(function () {
  
   $("#search").keypress(function (event) {
-
     var keycode = (event.keyCode ? event.keyCode : event.which);
-
-
     if (keycode === 13) {
       var searchTerm = $("#search").val()
       displayInfo(searchTerm);
-
     }
   });
   $("#searchbutton").on("click", function (event) {
     event.preventDefault();
-
     var searchTerm = $("#search").val();
     //console.log(searchTerm);
     displayInfo(searchTerm);
-
   });
 
 
@@ -62,35 +56,15 @@ $(document).ready(function () {
 
 
         var gameImage = $("<img>");
-
         gameImage.attr({ src: results[i].image.medium_url, class: "card-image"  });
         gameImage.attr("id", "game"+ count)
         gameImage.addClass("game-image");
-
-        
-        
         gameDiv.append(gameImage);
         gameDiv.append(favoriteHeart);
         gameDiv.append(title)
-        
         gameDiv.append(pThree);
-        
-
-
-
-
         $("#appear-here").prepend(gameDiv);
-
       }
-
-
-
-
-
     });
-
-
   };
-  
-  
 });
