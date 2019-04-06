@@ -6,8 +6,8 @@
  * Made By MaterializeCSS.com
  */
 .card-image{
- height: 200px;
- width: 200px;
+ height: auto;
+ width: 100%;
 
 }
 
