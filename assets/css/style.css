@@ -30,7 +30,7 @@ p {
 }
 
 .sidenav-trigger {
-  color: #26a69a;
+  color: black;
 }
 
 .parallax-container {
@@ -58,7 +58,7 @@ p {
     top: 0;
   }
   #search {
-    bottom: 0;
+  top: 250px;
   }
 
 }
@@ -89,7 +89,7 @@ button {
 }
 
 #search {
-  color: white;
+  color: black;
   position: absolute;
   bottom: 100px;
 }
