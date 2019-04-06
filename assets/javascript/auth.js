@@ -31,6 +31,8 @@
 // ui.start('#firebaseui-auth-container', uiConfig);
 
 
+
+
 var signupForm = document.querySelector('#signup-form');
 signupForm.addEventListener('submit', function () {
     event.preventDefault();
@@ -53,6 +55,7 @@ signupForm.addEventListener('submit', function () {
                         console.log("The write failed...");
                     } else {
                         console.log("Data saved successfully!");
+
                     }
                 });
             M.Modal.getInstance(modal).close();
@@ -67,6 +70,11 @@ logOutArray.forEach(function (logout) {
         auth.signOut()
             .then(() => {
                 console.log("user signed out");
+                $(".logged-out").removeClass("hide");
+                $(".logged-in").addClass("hide");
+
+
+
 
             });
     });
@@ -79,14 +87,26 @@ loginForm.addEventListener('submit', function () {
     const email = loginForm['login-email'].value;
     const password = loginForm['login-password'].value;
     console.log(email, password);
+    $(".logged-out").addClass("hide");
+    $(".logged-in").removeClass("hide");
+
+    // $(".logged-out").on("click", function(){
+
+    //     $(".logged-out").removeClass("hide");
+    //     $(".logged-in").addClass("hide");
+
+    // });
+
     //sign user in
     auth.signInWithEmailAndPassword(email, password)
         .then(function (credential) {
             //  console.log(credential.user.uid);
             var uid = credential.user.uid;
             setUid(uid);
-            // userLogged = true;
-            // close login modal and reset form
+
+
+
+            // close login modal and reset form and hide login/ show logOut
             const modal = document.querySelector('#modal-login')
             M.Modal.getInstance(modal).close();
             loginForm.reset();
