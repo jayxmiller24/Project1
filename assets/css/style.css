@@ -8,8 +8,12 @@
 .card-image{
  height: 200px;
  width: 200px;
+
 }
 
+.hide {
+  display: none !important;
+}
   
 .card{
   height: 400px;
@@ -93,5 +97,4 @@ button {
 #smallTitle {
   font-family: 'VT323', monospace;
 
-}
 }
