@@ -70,10 +70,10 @@ logOutArray.forEach(function (logout) {
         auth.signOut()
             .then(() => {
                 console.log("user signed out");
-                    $(".logged-out").removeClass("hide");
-                    $(".logged-in").addClass("hide");
-        
-            
+                $(".logged-out").removeClass("hide");
+                $(".logged-in").addClass("hide");
+
+
 
 
             });
@@ -89,9 +89,9 @@ loginForm.addEventListener('submit', function () {
     console.log(email, password);
     $(".logged-out").addClass("hide");
     $(".logged-in").removeClass("hide");
-    
+
     // $(".logged-out").on("click", function(){
-        
+
     //     $(".logged-out").removeClass("hide");
     //     $(".logged-in").addClass("hide");
 
