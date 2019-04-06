@@ -8,8 +8,12 @@
 .card-image{
  height: 200px;
  width: 200px;
+
 }
 
+.hide {
+  display: none !important;
+}
   
 .card-panel{
   height: 300px;
@@ -98,3 +102,4 @@ text-align: center;
 #footerLinks {
   text-align: center;
 }
+
