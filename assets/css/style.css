@@ -40,19 +40,23 @@ p {
   }
 
 @media only screen and (max-width : 992px) {
-  .parallax-container .section {
+  .parallax-container .section #search {
     position: absolute;
     top: 40%;
   }
-  #index-banner .section {
+  #index-banner .section #search {
     top: 10%;
   }
 }
 
 @media only screen and (max-width : 600px) {
-  #index-banner .section {
+  #index-banner .section{
     top: 0;
   }
+  #search {
+    bottom: 0;
+  }
+
 }
 
 .icon-block {
@@ -63,6 +67,8 @@ p {
 }
 
 footer.page-footer {
+  bottom: 0;
+  width: 100%;
   margin: 0;
 }
 .modal{
@@ -92,9 +98,17 @@ button {
 
 .footer-copyright {
 text-align: center;
-
 }
 
-#footerLinks {
-  text-align: center;
+
+#about {
+  font-family: 'Bungee Shade', cursive;
+  color: darkorange;
+  font-size: 100px;
+}
+
+#favoritestext {
+  font-family: 'Bungee Shade', cursive;
+  color: darkorange;
+  font-size: 100px;
 }
