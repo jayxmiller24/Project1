@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 });
-$(document).on("click", ".card", function(){
+$(document).on("click", ".card-panel", function(){
     console.log("clicked image");
     var cardImage= $(this).find("img");
     var mainTitle = $(this).find("h6").text();
