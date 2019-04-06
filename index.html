@@ -120,58 +120,64 @@
     </div>
   </div>
 
-  <!--Sign Up Modal-->
-  <div id="modal-signup" class="modal">
-    <div class="modal-content">
-      <h4 class="teal-text text-lighten-2 center">Sign Up</h4><br />
-      <form id="signup-form">
-        <div class="input-field col s12">
-          <i class="teal-text text-lighten-2 material-icons prefix">email</i>
-          <input id="sign-email" type="email" required />
-          <label for="signup-email">Email</label>
-        </div>
-        <div class="input-field col s12">
-          <i class="teal-text text-lighten-2 material-icons prefix">lock</i>
-          <input id="sign-password" type="password" required />
-          <label for="signup-password">Choose Password</label>
-        </div><br />
-        <button class="btn btn-large teal lighten-2 z-depth-0 center">Sign up</button>
-      </form>
+    <!--Sign Up Modal-->
+    <div id="modal-signup" class="modal">
+      <div class="modal-content">
+        <h4 class="0277bd light-blue darken-3 center">Sign Up</h4><br />
+        <form id="signup-form">
+          <div class="input-field col s12">
+            <i class="0277bd light-blue darken-3 material-icons prefix">email</i>
+            <input id="sign-email" type="email" required />
+            <label for="signup-email">Email</label>
+          </div>
+          <div class="input-field col s12">
+            <i class="0277bd light-blue darken-3 material-icons prefix">lock</i>
+            <input id="sign-password" type="password" required />
+            <label for="signup-password">Choose Password</label>
+          </div><br />
+          <button class="btn btn-large 0277bd light-blue darken-3 z-depth-0 center">Sign up</button>
+        </form>
+      </div>
     </div>
-  </div>
-
-  <!---Login Modal-->
-  <div id="modal-login" class="modal">
-    <div class="modal-content">
-      <h4 class="teal-text text-lighten-2 center">Log In</h4>
-      <br />
-      <form id="login-form">
-        <div class="input-field col s12">
-          <i class="teal-text text-lighten-2 material-icons prefix">email</i>
-          <input id="login-email" type="email" class="validate" />
-          <label for="login-email">Email</label>
-        </div>
-        <div class="input-field col s12">
-          <i class="teal-text text-lighten-2 material-icons prefix">lock</i>
-          <input id="login-password" type="password" class="validate" />
-          <label for="login-password">Password</label>
-        </div>
-        <button class="btn btn-large teal lighten-2 z-depth-0 center">Login</button>
-      </form>
+ 
+      <!---Login Modal-->
+    <div id="modal-login" class="modal">
+      <div class="modal-content">
+        <h4 class="0277bd light-blue darken-3">Log In</h4>
+        <br />
+        <form id="login-form">
+          <div class="input-field col s12">
+            <i class="0277bd light-blue darken-3 material-icons prefix">email</i>
+            <input id="login-email" type="email" class="validate" />
+            <label for="login-email">Email</label>
+          </div>
+          <div class="input-field col s12">
+            <i class="0277bd light-blue darken-3 material-icons prefix">lock</i>
+            <input id="login-password" type="password" class="validate" />
+            <label for="login-password">Password</label>
+          </div>
+          <button class="btn btn-large 0277bd light-blue darken-3 z-depth-0 center">Login</button>
+        </form>
+      </div>
     </div>
-  </div>
 
-  <div id="game" class="modal">
-    <div class="modal-content">
-      <img src="" alt="">
-      <h6></h6>
-      <p></p>
-
-      <br />
-
-
-    </div>
-  </div>
+      <!---Game Modal-->
+    <div id="game" class="modal">
+      <div class="modal-header">
+        <h6></h6>
+      </div>
+      <!-- <div class="container"> -->
+        <div class="row">
+          <div class="col s6">
+            <div class="modal-content">
+              <img src="" alt="" />
+              <p></p>
+              <br />
+            </div>
+          </div>
+          <div class="col s6">
+            <div class="vids" id="youtube-list"></div>
+          </div>
 
 
   <footer class="page-footer 0277bd light-blue darken-3">
@@ -208,4 +214,26 @@
   <script src="./assets/javascript/index.js"></script>
 </body>
 
+    <!-- Firebase  -->
+    <script src="https://www.gstatic.com/firebasejs/5.9.2/firebase.js"></script>
+    <!-- jquery js -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!-- Materialize js -->
+    <script src="assets/javascript/init.js"></script>
+    <script src="assets/javascript/materialize.min.js"></script>
+    <script src="assets/javascript/materialize.js"></script>
+    <!-- Firebase init -->
+    <script src="./assets/javascript/firebasejs.js"></script>
+    <!-- Auth js -->
+    <script src="./assets/javascript/auth.js"></script>
+    <!-- Giantbomb API -->
+    <script src="./assets/javascript/databaseapi.js"></script>
+    <!-- YouTube API -->
+    <script src="https://apis.google.com/js/api.js"></script>
+    <!-- YouTube js -->
+    <script src="./assets/javascript/youtubeapi.js"></script>
+    <!-- Index js -->
+    <script src="./assets/javascript/index.js"></script>
+  </body>
 </html>
+

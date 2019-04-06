@@ -19,9 +19,9 @@ $(document).on("click", ".card-panel", function(){
     var cardImage= $(this).find("img");
     var mainTitle = $(this).find("h6").text();
     var mainP= $(this).find("p").text();
-    console.log(cardImage);
-    console.log(mainTitle);
-    console.log(mainP);
+    // console.log(cardImage);
+    // console.log(mainTitle);
+    // console.log(mainP);
     
     
 
@@ -38,7 +38,38 @@ $(document).on("click", ".card-panel", function(){
    $("#game h6").text(mainTitle);
    $("#game p").text(mainP);
     
+
+//    console.log(mainTitle);
+   
+   const searchOBJ = searchQuery(mainTitle);
+   $.getJSON(searchOBJ.queryURL, searchOBJ.options, function(data) {
+    const results = data.items
+    console.log(results);
+    results.forEach(i => {
+        let vidID = i.id.videoId;
+        console.log(vidID);
+
+        let vidTitle = i.snippet.title;
+        console.log(vidTitle);
+
+        let vidImg = i.snippet.thumbnails.default.url;
+        console.log(vidImg);
+        
+        let modalDiv = $("#youtube-list");
+        let newDiv = $("<div>")
+        let newheader = $("<h6>");
+        let newImage = $("<img>");
+        newDiv.attr("id", vidID);
+        newImage.attr("src", vidImg);
+        newDiv.append(newImage);
+        newheader.text(vidTitle);
+        newDiv.append(newheader);
+        modalDiv.append(newDiv);
     
+    });
+  });
+
+
 
     $("#game").show();
 
