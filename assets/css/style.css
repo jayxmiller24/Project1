@@ -15,10 +15,10 @@
   display: none !important;
 }
   
-.card{
-  height: 400px;
+.card-panel{
+  height: 300px;
   margin: 5px;
-  overflow: scroll;
+  /*overflow: scroll;*/
 }
 nav ul a,
 nav .brand-logo {
@@ -84,17 +84,22 @@ button {
 
 #search {
   color: white;
+  position: absolute;
+  bottom: 100px;
+}
+
+#searchbutton {
+  position: absolute;
+  bottom: 40px;
 
 }
 
-#title {
-  font-family: 'VT323', monospace;
-  font-size: 200px;
-  text-align: left;
- 
-}
-
-#smallTitle {
-  font-family: 'VT323', monospace;
+.footer-copyright {
+text-align: center;
 
 }
+
+#footerLinks {
+  text-align: center;
+}
+
