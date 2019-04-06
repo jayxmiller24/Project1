@@ -8,12 +8,10 @@ uid = id;
 console.log(uid);
 }
 
-document.addEventListener('DOMContentLoaded', function () {
-    var modals = document.querySelectorAll('.modal');
-    M.Modal.init(modals);
-
-
+$(document).ready(function () {
+    $('.modal').modal();
 });
+
 $(document).on("click", ".card-panel", function(){
     console.log("clicked image");
     var cardImage= $(this).find("img");
