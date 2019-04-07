@@ -41,13 +41,11 @@ $(document).ready(function () {
         descount++
         titleCount++
         favoriteCount++
-        var gameDiv = $("<div class='col s3 card-panel hoverable'>");
-        gameDiv.attr("style", );
+        var gameDiv = $("<div class='col s3 card-panel hoverable modal-trigger'>");
+        gameDiv.attr("data-target", "game");
         var title = $("<h6>").text(results[i].name);
         
         title.attr("id", "title" + titleCount);
-        var favoriteHeart=$("<i>")
-        favoriteHeart.addClass("material-icons")
         
         var pThree = $("<p>");
         $(pThree).text("Description: " + results[i].deck);
@@ -60,7 +58,7 @@ $(document).ready(function () {
         gameImage.attr("id", "game"+ count)
         gameImage.addClass("game-image");
         gameDiv.append(gameImage);
-        gameDiv.append(favoriteHeart);
+        // gameDiv.append(favoriteHeart);
         gameDiv.append(title)
         gameDiv.append(pThree);
         $("#appear-here").prepend(gameDiv);

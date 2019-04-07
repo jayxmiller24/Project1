@@ -8,12 +8,10 @@ uid = id;
 console.log(uid);
 }
 
-document.addEventListener('DOMContentLoaded', function () {
-    var modals = document.querySelectorAll('.modal');
-    M.Modal.init(modals);
-
-
+$(document).ready(function () {
+    $('.modal').modal();
 });
+
 $(document).on("click", ".card-panel", function(){
     console.log("clicked image");
     var cardImage= $(this).find("img");
@@ -24,16 +22,9 @@ $(document).on("click", ".card-panel", function(){
     // console.log(mainP);
 
     var imgSource = $(cardImage).attr("src");
-    console.log(imgSource);
-    var pFour = $("<p>");
-    var header= $("<h6>");
-    
-    var modalImage = $("<img>");
-    modalImage.append("#game");
-    header.append("#game");
-    pFour.append("#game");
+    // console.log(imgSource);
    $("#game img").attr("src", imgSource);
-   $("#game h6").text(mainTitle);
+   $("#game h4").text(mainTitle);
    $("#game p").text(mainP);
     
 
@@ -65,7 +56,7 @@ $(document).on("click", ".card-panel", function(){
         modalDiv.append(newDiv);
     });
   });
-    $("#game").show();
+    // $("#game").show();
   });
 
 

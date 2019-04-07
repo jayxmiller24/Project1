@@ -5,21 +5,6 @@
  *
  * Made By MaterializeCSS.com
  */
-.card-image{
- height: auto;
- width: 100%;
-
-}
-
-.hide {
-  display: none !important;
-}
-  
-.card-panel{
-  height: 300px;
-  margin: 5px;
-  /*overflow: scroll;*/
-}
 nav ul a,
 nav .brand-logo {
   color: #444;
@@ -28,6 +13,35 @@ nav .brand-logo {
 p {
   line-height: 2rem;
 }
+
+button {
+  width: 100%;
+}
+
+footer.page-footer {
+  bottom: 0;
+  width: 100%;
+  margin: 0;
+}
+
+.card-image{
+  height: auto;
+  width: 100%;
+ }
+#favorite-button {
+  width: 100%;
+  align-items: center;
+}
+
+.card-panel{
+  height: 300px;
+  margin: 5px;
+  /*overflow: scroll;*/
+}
+ 
+ .hide {
+   display: none !important;
+ }
 
 .sidenav-trigger {
   color: black;
@@ -42,6 +56,75 @@ p {
   .parallax-container .section {
     width: 100%;
   }
+
+.icon-block {
+  padding: 0 10px;
+}
+.icon-block .material-icons {
+  font-size: inherit;
+}
+
+
+/* label color
+.input-field label {
+  color: #000;
+}
+/* label focus color */
+/* .input-field input[type=text]:focus + label {
+  color: #000;
+} */
+/* label underline focus color */
+/* .input :focus {
+  border-bottom: 1px solid #FF8000;
+  box-shadow: 0 1px 0 0 #FF8000;
+} */
+/* valid color */
+/* .input-field input[type=text].valid {
+  border-bottom: 1px solid #000;
+  box-shadow: 0 1px 0 0 #000;
+} */
+/* invalid color */
+/* .input-field input[type=text].invalid {
+  border-bottom: 1px solid #000;
+  box-shadow: 0 1px 0 0 #000;
+} */
+/* icon prefix focus color */
+/* .input-field .prefix.active {
+  color: #000;
+} */
+
+.footer-copyright {
+  text-align: center;
+  }
+
+#game-modal-header {
+  padding: 10px 0;
+  /* background-color: #FF8000; */
+}
+
+#search {
+  color: black;
+  position: absolute;
+  bottom: 100px;
+}
+
+#searchbutton {
+  position: absolute;
+  bottom: 40px;
+
+}
+
+#about {
+  font-family: 'Bungee Shade', cursive;
+  color: #FF8000 ;
+  font-size: 100px;
+}
+
+#favoritestext {
+  font-family: 'Bungee Shade', cursive;
+  color: #FF8000;
+  font-size: 100px;
+}
 
 @media only screen and (max-width : 992px) {
   .parallax-container .section #search {
@@ -61,59 +144,5 @@ p {
   top: 250px;
   }
 
-}
-
-.icon-block {
-  padding: 0 15px;
-}
-.icon-block .material-icons {
-  font-size: inherit;
-}
-
-footer.page-footer {
-  bottom: 0;
-  width: 100%;
-  margin: 0;
-}
-.modal{
- top: 0
-  /* overflow-y: hidden; */
-  
-}
-.modal img{
-  height: 200px;
-  width: 200px;
-}
-button {
-  width: 100%;
-}
-
-#search {
-  color: black;
-  position: absolute;
-  bottom: 100px;
-}
-
-#searchbutton {
-  position: absolute;
-  bottom: 40px;
-
-}
-
-.footer-copyright {
-text-align: center;
-}
-
-
-#about {
-  font-family: 'Bungee Shade', cursive;
-  color: darkorange;
-  font-size: 100px;
-}
-
-#favoritestext {
-  font-family: 'Bungee Shade', cursive;
-  color: darkorange;
-  font-size: 100px;
 }
 
