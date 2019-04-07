@@ -22,14 +22,7 @@ $(document).on("click", ".card-panel", function(){
     // console.log(mainP);
 
     var imgSource = $(cardImage).attr("src");
-    console.log(imgSource);
-    var pFour = $("<p>");
-    var header= $("<h6>");
-    
-    var modalImage = $("<img>");
-    modalImage.append("#game");
-    header.append("#game");
-    pFour.append("#game");
+    // console.log(imgSource);
    $("#game img").attr("src", imgSource);
    $("#game h6").text(mainTitle);
    $("#game p").text(mainP);
