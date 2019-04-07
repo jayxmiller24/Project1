@@ -24,7 +24,7 @@ $(document).on("click", ".card-panel", function(){
     var imgSource = $(cardImage).attr("src");
     // console.log(imgSource);
    $("#game img").attr("src", imgSource);
-   $("#game h6").text(mainTitle);
+   $("#game h4").text(mainTitle);
    $("#game p").text(mainP);
     
 
@@ -56,7 +56,7 @@ $(document).on("click", ".card-panel", function(){
         modalDiv.append(newDiv);
     });
   });
-    $("#game").show();
+    // $("#game").show();
   });
 
 
