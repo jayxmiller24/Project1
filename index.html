@@ -1,292 +1,217 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <!-- bootstrap -->
-    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"/> -->
 
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script> -->
-    <!-- <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script> -->
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  
+  <!--materialize css  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+  <link href="assets/css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection" />
 
-    <!--materialize css  -->
-    <link
-      href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet"
-    />
-    <link
-      href="assets/css/materialize.css"
-      type="text/css"
-      rel="stylesheet"
-      media="screen,projection"
-    />
+  <!--Font-->
+  <link href="https://fonts.googleapis.com/css?family=Bungee+Shade" rel="stylesheet" />
+  <!--App CSS-->
+  <link href="assets/css/style.css" type="text/css" rel="stylesheet" media="screen,projection" />
 
-    <!--Font-->
-    <link
-      href="https://fonts.googleapis.com/css?family=Bungee+Shade"
-      rel="stylesheet"
-    />
-    <!--App CSS-->
-    <link
-      href="assets/css/style.css"
-      type="text/css"
-      rel="stylesheet"
-      media="screen,projection"
-    />
+  <title>Game Tinder</title>
+</head>
 
-    <title>Game Tinder</title>
-  </head>
-
-  <body>
-    <!--Nav bar-->
-    <nav class="z-depth-0 white" role="navigation">
-      <div class="nav-wrapper container">
-        <a id="logo-container" href="#" class="brand-logo"
-          ><img src="assets/Images/GameTinderLogo.png" style="width: 350px;"
-        /></a>
-        <!--Nav links -->
-        <ul class="right hide-on-med-and-down">
-          <li class="logged-out">
-            <a
-              href="#"
-              class="grey-text modal-trigger"
-              data-target="modal-login"
-              >Log In</a
-            >
-          </li>
-          <li>
-            <a
-              href="#"
-              class="grey-text modal-trigger"
-              data-target="modal-favorites"
-              >Favorites</a
-            >
-          </li>
-          <li class="logged-out">
-            <a
-              href="#"
-              class="grey-text modal-trigger"
-              data-target="modal-signup"
-              >Sign Up</a
-            >
-          </li>
-          <li class="logged-in hide">
-            <a href="#" class="grey-text logout" id="logout">Log Out</a>
-          </li>
-        </ul>
-        <!--Side Nav links-->
-        <ul id="nav-mobile" class="sidenav">
-          <li class="logged-out">
-            <a
-              href="#"
-              class="grey-text modal-trigger"
-              data-target="modal-login"
-              >Log In</a
-            >
-          </li>
-          <li>
-            <a
-              href="#"
-              class="grey-text modal-trigger"
-              data-target="modal-favorites"
-              >Favorites</a
-            >
-          </li>
-          <li class="logged-out">
-            <a
-              href="#"
-              class="grey-text modal-trigger"
-              data-target="modal-signup"
-              >Sign Up</a
-            >
-          </li>
-          <li class="logged-in hide">
-            <a href="#" class="grey-text logout" id="logout">Log Out</a>
-          </li>
-        </ul>
-        <a href="#" data-target="nav-mobile" class="sidenav-trigger"
-          ><i class="material-icons">menu</i></a
-        >
-      </div>
-    </nav>
-
-    <div id="index-banner" class="parallax-container">
-      <div class="section no-pad-bot">
-        <div class="container">
-          <br /><br />
-          <div class="row center"></div>
-          <input
-            type="text"
-            class="form-control"
-            id="search"
-            placeholder="Search Games Here"
-          />
-          <div class="row">
-            <a
-              href="http://materializecss.com/getting-started.html"
-              id="searchbutton"
-              class="btn-large waves-effect waves-0277bd light-blue darken-3"
-              >Search</a
-            >
-          </div>
-          <br /><br />
-        </div>
-      </div>
-      <div class="parallax">
-        <img src="assets/Images/mario1.jpg" alt="Mario" />
-      </div>
+<body>
+  <!--Nav bar-->
+  <nav class="z-depth-0 white" role="navigation">
+    <div class="nav-wrapper container">
+      <a id="logo-container" href="#" class="brand-logo"><img src="assets/Images/GameTinderLogo.png"
+          style="width: 350px;" /></a>
+      <!--Nav links -->
+      <ul class="right hide-on-med-and-down">
+        <li class="logged-out">
+          <a href="#" class="grey-text modal-trigger" data-target="modal-login">Log In</a>
+        </li>
+        <li>
+          <a href="#" class="grey-text modal-trigger" data-target="modal-favorites">Favorites</a>
+        </li>
+        <li class="logged-out">
+          <a href="#" class="grey-text modal-trigger" data-target="modal-signup">Sign Up</a>
+        </li>
+        <li class="logged-in hide">
+          <a href="#" class="grey-text logout" id="logout">Log Out</a>
+        </li>
+      </ul>
+      <!--Side Nav links-->
+      <ul id="nav-mobile" class="sidenav">
+        <li class="logged-out">
+          <a href="#" class="grey-text modal-trigger" data-target="modal-login">Log In</a>
+        </li>
+        <li>
+          <a href="#" class="grey-text modal-trigger" data-target="modal-favorites">Favorites</a>
+        </li>
+        <li class="logged-out">
+          <a href="#" class="grey-text modal-trigger" data-target="modal-signup">Sign Up</a>
+        </li>
+        <li class="logged-in hide">
+          <a href="#" class="grey-text logout" id="logout">Log Out</a>
+        </li>
+      </ul>
+      <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
     </div>
+  </nav>
 
-    <div class="container">
-      <div class="section">
-        <!--   Icon Section   -->
-        <div class="row" id="appear-here"></div>
-      </div>
-    </div>
-
-    <div class="parallax-container valign-wrapper">
-      <div class="section no-pad-bot">
-        <div class="container">
-          <div class="row center">
-            <h5 class="header col s12 light" id="about">
-              About Us
-            </h5>
-          </div>
-        </div>
-      </div>
-      <div class="parallax">
-        <img src="assets/Images/gaming.jpg" alt="controller" />
-      </div>
-    </div>
-    <div class="container">
-      <div class="section">
-        <div class="row">
-          <div class="col s12 center">
-            <h3><i class="mdi-content-send brown-text"></i></h3>
-            <p class="left-align light" id="youtube-appear-here"></p>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!--Sign Up Modal-->
-    <div id="modal-signup" class="modal">
-      <div class="modal-content">
-        <h4 class="light-blue-text barken-3 center">Sign Up</h4>
-        <br />
-        <form id="signup-form">
-          <div class="input-field col s12">
-            <i class="light-blue-text darken-3 material-icons prefix">email</i>
-            <input class="validate" id="sign-email" type="email" required />
-            <label for="signup-email">Email</label>
-            <span
-              class="helper-text"
-              data-error="Please enter a valid email"
-              data-success="Looks great!"
-            ></span>
-          </div>
-          <div class="input-field col s12">
-            <i class="light-blue-text darken-3 material-icons prefix">lock</i>
-            <input
-              class="validate"
-              id="sign-password"
-              type="password"
-              required
-            />
-            <label for="signup-password">Choose Password</label>
-            <span
-              class="helper-text"
-              data-error="You must enter a password"
-              data-success="You are ready to go!"
-            ></span>
-          </div>
-          <br />
-          <button class="btn btn-large light-blue darken-3 z-depth-0 center">
-            Sign up
-          </button>
-        </form>
-      </div>
-    </div>
-
-    <!---Login Modal-->
-    <div id="modal-login" class="modal">
-      <div class="modal-content">
-        <h4 class="light-blue-text darken-3 center">Log In</h4>
-        <br />
-        <form id="login-form">
-          <div class="input-field col s12">
-            <i class="light-blue-text darken-3 material-icons prefix">email</i>
-            <input id="login-email" type="email" class="validate" />
-            <label for="login-email">Email</label>
-          </div>
-          <div class="input-field col s12">
-            <i class="light-blue-text darken-3 material-icons prefix">lock</i>
-            <input id="login-password" type="password" class="validate" />
-            <label for="login-password">Password</label>
-          </div>
-          <button class="btn btn-large light-blue darken-3 z-depth-0 center">
-            Login
-          </button>
-        </form>
-      </div>
-    </div>
-
-    <!---Game Modal-->
-    <div id="game" class="modal">
-      <div class="panel-header">
-        <h4 class="light-blue-text center" id="game-modal-header"></h4>
-      </div>
-      <div class="modal-content">
-        <div class="row">
-          <div class="col s6">
-            <img class="card-image" id="game-image" src="" alt="" />
-            <a class="light-blue waves-effect waves-light btn btn-large" id="favorite-button"><i class="material-icons">favorite_border</i>Favorite</a>
-            <p id="game-description"></p>
-            <br />
-          </div>
-          <div class="col s6">
-            <div class="vids" id="youtube-list"></div>
-          </div>
-        </div>
-      </div>
-      <div class="modal-footer">
-        <a class="light-blue waves-effect waves-light btn btn-large modal-close">Close</a>
-      </div>
-    </div>
-
-    <footer class="page-footer 0277bd light-blue darken-3">
+  <div id="index-banner" class="parallax-container">
+    <div class="section no-pad-bot">
       <div class="container">
-        <div class="row"></div>
+        <br /><br />
+        <div class="row center"></div>
+        <input type="text" class="col s6 form-control" id="search" placeholder="Search Games Here" />
+        <div class="row">
+          <a href="http://materializecss.com/getting-started.html" id="searchbutton"
+            class="btn-large waves-effect waves-0277bd light-blue darken-3">Search</a>
+        </div>
+        <br /><br />
       </div>
-      <div class="footer-copyright">
-        <div class="container">
-          <a class="gray-text text-lighten-3" href="About Page Link"
-            >© 2019 Team Stark</a
-          >
+    </div>
+    <div class="parallax">
+      <img src="assets/Images/mario1.jpg" alt="Mario" />
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="section">
+      <!--   Icon Section   -->
+      <div class="row" id="appear-here"></div>
+    </div>
+  </div>
+
+  <div class="parallax-container valign-wrapper">
+    <div class="section no-pad-bot">
+      <div class="container">
+        <div class="row center">
+          <h5 class="header col s12 light" id="about">
+            About Us
+          </h5>
         </div>
       </div>
-    </footer>
+    </div>
+    <div class="parallax">
+      <img src="assets/Images/gaming.jpg" alt="controller" />
+    </div>
+  </div>
+  <div class="container">
+    <div class="section">
+      <div class="row">
+        <div class="col s12 center">
+          <h3><i class="mdi-content-send brown-text"></i></h3>
+          <p class="left-align light" id="youtube-appear-here"></p>
+        </div>
+      </div>
+    </div>
+  </div>
 
-    <!-- Firebase  -->
-    <script src="https://www.gstatic.com/firebasejs/5.9.2/firebase.js"></script>
-    <!-- jquery js -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <!-- Materialize js -->
-    <script src="assets/javascript/init.js"></script>
-    <script src="assets/javascript/materialize.min.js"></script>
-    <script src="assets/javascript/materialize.js"></script>
-    <!-- Firebase init -->
-    <script src="./assets/javascript/firebasejs.js"></script>
-    <!-- Auth js -->
-    <script src="./assets/javascript/auth.js"></script>
-    <!-- Giantbomb API -->
-    <script src="./assets/javascript/databaseapi.js"></script>
-    <!-- YouTube API -->
-    <script src="https://apis.google.com/js/api.js"></script>
-    <!-- YouTube js -->
-    <script src="./assets/javascript/youtubeapi.js"></script>
-    <!-- Index js -->
-    <script src="./assets/javascript/index.js"></script>
-  </body>
+  <!--Sign Up Modal-->
+  <div id="modal-signup" class="modal">
+    <div class="modal-content">
+      <h4 class="light-blue-text barken-3 center">Sign Up</h4>
+      <br />
+      <form id="signup-form">
+        <div class="input-field col s12">
+          <i class="light-blue-text darken-3 material-icons prefix">email</i>
+          <input class="validate" id="sign-email" type="email" required />
+          <label for="signup-email">Email</label>
+          <span class="helper-text" data-error="Please enter a valid email" data-success="Looks great!"></span>
+        </div>
+        <div class="input-field col s12">
+          <i class="light-blue-text darken-3 material-icons prefix">lock</i>
+          <input class="validate" id="sign-password" type="password" required />
+          <label for="signup-password">Choose Password</label>
+          <span class="helper-text" data-error="You must enter a password" data-success="You are ready to go!"></span>
+        </div>
+        <br />
+        <button class="btn btn-large light-blue darken-3 z-depth-0 center">
+          Sign up
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!---Login Modal-->
+  <div id="modal-login" class="modal">
+    <div class="modal-content">
+      <h4 class="light-blue-text darken-3 center">Log In</h4>
+      <br />
+      <form id="login-form">
+        <div class="input-field col s12">
+          <i class="light-blue-text darken-3 material-icons prefix">email</i>
+          <input id="login-email" type="email" class="validate" />
+          <label for="login-email">Email</label>
+        </div>
+        <div class="input-field col offset-s6">
+          <i class="light-blue-text darken-3 material-icons prefix">lock</i>
+          <input id="login-password" type="password" class="validate" />
+          <label for="login-password">Password</label>
+        </div>
+        <button class="btn btn-large light-blue darken-3 z-depth-0 center">
+          Login
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!---Game Modal-->
+  <div id="game" class="modal">
+    <div class="panel-header">
+      <h4 class="light-blue-text center" id="game-modal-header"></h4>
+    </div>
+    <div class="modal-content">
+      <div class="row">
+        <div class="col s6">
+          <img class="card-image" id="game-image" src="" alt="" />
+          <a class="light-blue waves-effect waves-light btn btn-large" id="favorite-button"><i
+              class="material-icons">favorite_border</i>Favorite</a>
+          <p id="game-description"></p>
+          <br />
+        </div>
+        <div class="col s6">
+          <div class="vids" id="youtube-list"></div>
+        </div>
+      </div>
+    </div>
+    <div class="modal-footer">
+      <a class="light-blue waves-effect waves-light btn btn-large modal-close">Close</a>
+    </div>
+  </div>
+
+  <footer class="page-footer 0277bd light-blue darken-3">
+    <div class="container">
+      <div class="row"></div>
+    </div>
+    <div class="footer-copyright">
+      <div class="container">
+        <a class="gray-text text-lighten-3" href="About Page Link">© 2019 Team Stark</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Firebase  -->
+  <script src="https://www.gstatic.com/firebasejs/5.9.2/firebase.js"></script>
+  <!-- jquery js -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <!-- Materialize js -->
+  <script src="assets/javascript/init.js"></script>
+  <script src="assets/javascript/materialize.min.js"></script>
+  <script src="assets/javascript/materialize.js"></script>
+  <!-- Firebase init -->
+  <script src="./assets/javascript/firebasejs.js"></script>
+  <!-- Auth js -->
+  <script src="./assets/javascript/auth.js"></script>
+  <!-- Giantbomb API -->
+  <script src="./assets/javascript/databaseapi.js"></script>
+  <!-- YouTube API -->
+  <script src="https://apis.google.com/js/api.js"></script>
+  <!-- YouTube js -->
+  <script src="./assets/javascript/youtubeapi.js"></script>
+  <!-- Index js -->
+  <script src="./assets/javascript/index.js"></script>
+</body>
+
 </html>
