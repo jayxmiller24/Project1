@@ -75,3 +75,14 @@ var onGameModalHide = function() {
   $("#game-description").empty();
   $("#youtube-list").empty();
 };
+
+$("#favorite-button").on("click", function(){
+
+  console.log("on fav click", uid);
+  
+    database.ref('users/'+ uid).push({
+      gameName: "Test game name"
+    });
+
+
+});

@@ -10,10 +10,10 @@ signupForm.addEventListener('submit', function () {
     auth.createUserWithEmailAndPassword(email, password)
         .then(function (credential) {
             const uid = credential.user.uid;
-            console.log(credential.user)
+            console.log(credential.user.uid)
             const modal = document.querySelector('#modal-signup')
-            database.ref().push({
-                uid: uid
+            database.ref('users/' + uid).set({
+                user_email: email
             },
                 function (error) {
                     if (error) {
