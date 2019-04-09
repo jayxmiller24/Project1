@@ -4,7 +4,7 @@ signupForm.addEventListener('submit', function () {
     //get user info
     const email = signupForm['sign-email'].value;
     const password = signupForm['sign-password'].value;
-    console.log(email, password);
+    // console.log(email, password);
 
     // sign up the user
     auth.createUserWithEmailAndPassword(email, password)
@@ -48,7 +48,7 @@ loginForm.addEventListener('submit', function () {
     // get user input
     const email = loginForm['login-email'].value;
     const password = loginForm['login-password'].value;
-    console.log(email, password);
+    // console.log(email, password);
     $(".logged-out").addClass("hide");
     $(".logged-in").removeClass("hide");
 

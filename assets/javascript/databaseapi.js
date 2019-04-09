@@ -30,7 +30,7 @@ $(document).ready(function () {
     }).then(function (response) {
       //console.log(response.results);
       var results = response.results;
-      //console.log(results)
+      // console.log(results)
       $("#appear-here").empty();
       var count= 0;
       var descount = 0;
