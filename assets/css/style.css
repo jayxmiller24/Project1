@@ -64,8 +64,6 @@ footer.page-footer {
   font-size: inherit;
 }
 
-
-
 /* label color
 .input-field label {
   color: #000;
@@ -100,6 +98,7 @@ footer.page-footer {
 
 #game-modal-header {
   padding: 10px 0;
+  font-family: 'Bungee Shade', cursive;
   /* background-color: #FF8000; */
 }
 
