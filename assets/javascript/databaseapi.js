@@ -3,7 +3,7 @@ $(document).ready(function () {
   $("#search").keypress(function (event) {
     var keycode = (event.keyCode ? event.keyCode : event.which);
     if (keycode === 13) {
-      var searchTerm = $("#search").val()
+      var searchTerm = $("#search1").val()
       displayInfo(searchTerm);
     }
   });
@@ -35,12 +35,12 @@ $(document).ready(function () {
       var count= 0;
       var descount = 0;
       var titleCount= 0;
-      var favoriteCount =0;
+      
       for (var i = 0; i < results.length; i++) {
         count++
         descount++
         titleCount++
-        favoriteCount++
+        
         var gameDiv = $("<div class='col s3 card-panel hoverable modal-trigger'>");
         gameDiv.attr("data-target", "game");
         var title = $("<h6>").text(results[i].name);
@@ -54,7 +54,7 @@ $(document).ready(function () {
 
 
         var gameImage = $("<img>");
-        gameImage.attr({ src: results[i].image.medium_url, class: "card-image"  });
+        gameImage.attr({ src: results[i].image.medium_url, class: "card-image"});
         gameImage.attr("id", "game"+ count)
         gameImage.addClass("game-image");
         gameDiv.append(gameImage);
