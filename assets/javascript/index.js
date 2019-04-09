@@ -76,8 +76,6 @@ var onGameModalHide = function() {
   $("#youtube-list").empty();
 };
 
-function gameExists() {}
-
 $("#favorite-button").on("click", function() {
   // console.log("on fav click", uid);
   let query = database.ref("users/" + uid).orderByChild("gameName");
