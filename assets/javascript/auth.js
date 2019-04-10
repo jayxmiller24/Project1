@@ -12,7 +12,7 @@ signupForm.addEventListener('submit', function () {
             const uid = credential.user.uid;
             console.log(credential.user.uid)
             const modal = document.querySelector('#modal-signup')
-            database.ref('users/' + uid).set({
+            database.ref('users/' + uid +'contact/').set({
                 user_email: email
             },
                 function (error) {
@@ -60,6 +60,10 @@ loginForm.addEventListener('submit', function () {
             setUid(uid);
             // close login modal and reset form and hide login/ show logOut
             const modal = document.querySelector('#modal-login')
+            // if ( document.URL.contains("favorite.html") ) {
+            //     getFavorites();
+            // }
+            getFavorites();
             M.Modal.getInstance(modal).close();
             loginForm.reset();
         });
