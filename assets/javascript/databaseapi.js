@@ -1,15 +1,15 @@
 $(document).ready(function () {
  
-  $("#search").keypress(function (event) {
+  $("#searchBar").keypress(function (event) {
     var keycode = (event.keyCode ? event.keyCode : event.which);
     if (keycode === 13) {
-      var searchTerm = $("#search1").val()
+      var searchTerm = $("#searchBar").val()
       displayInfo(searchTerm);
     }
   });
   $("#searchbutton").on("click", function (event) {
     event.preventDefault();
-    var searchTerm = $("#search").val();
+    var searchTerm = $("#searchBar").val();
     //console.log(searchTerm);
     displayInfo(searchTerm);
   });
@@ -65,4 +65,9 @@ $(document).ready(function () {
       }
     });
   };
+  $("#favorite-button").on("click", function(){
+    $(this).replaceWith("<i class='material-icons'>favorite</i>Favorited</a>");
+
+
+  })
 });
