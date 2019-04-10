@@ -8,10 +8,8 @@ function setUid(id) {
   // console.log(uid);
 }
 
-$(document).ready(function() {
-  // $(".modal").modal({
-  //   onCloseEnd: onModalHide
-  //  });
+
+$(document).ready(function () {
   $("#modal-login").modal({});
   $("#modal-signup").modal({});
   $("#game").modal({
@@ -19,7 +17,7 @@ $(document).ready(function() {
   });
 });
 
-$(document).on("click", ".card-panel", function() {
+$(document).on("click", ".card-panel", function () {
   // console.log("clicked image");
   var cardImage = $(this).find("img");
   var mainTitle = $(this)
@@ -41,7 +39,7 @@ $(document).on("click", ".card-panel", function() {
   //console.log(mainTitle);
 
   const searchOBJ = searchQuery(mainTitle);
-  $.getJSON(searchOBJ.queryURL, searchOBJ.options, function(data) {
+  $.getJSON(searchOBJ.queryURL, searchOBJ.options, function (data) {
     const results = data.items;
     // console.log(results);
     results.forEach(i => {
@@ -69,22 +67,22 @@ $(document).on("click", ".card-panel", function() {
 });
 
 // function to clear game modal when switching games
-var onGameModalHide = function() {
+var onGameModalHide = function () {
   // console.log("Modal closed!");
   $("#game-image").attr("src", "");
   $("#game-description").empty();
   $("#youtube-list").empty();
 };
 
-$("#favorite-button").on("click", function() {
+$("#favorite-button").on("click", function () {
   // console.log("on fav click", uid);
   let query = database.ref("users/" + uid).orderByChild("gameName");
   let gameName = $("#game-modal-header").text();
   let gameDeck = $("#game-image").attr("src");
   let gameDescription = $("#game-description").text();
   let favArray = [];
-  query.once("value").then(function(snapShot) {
-    snapShot.forEach(function(childSnapShot) {
+  query.once("value").then(function (snapShot) {
+    snapShot.forEach(function (childSnapShot) {
       let childGameName = childSnapShot.val().gameName;
       console.log(childGameName);
       if (typeof childGameName !== "undefined") {
@@ -97,7 +95,7 @@ $("#favorite-button").on("click", function() {
     });
     gameIsFav();
   });
-  var gameIsFav = function() {
+  var gameIsFav = function () {
     if ($.inArray(gameName, favArray) !== -1) {
       console.log("Game is a fav");
     } else {
@@ -112,7 +110,7 @@ $("#favorite-button").on("click", function() {
         gameDeck: gameDeck,
         gameDescription: gameDescription
       },
-      function(error) {
+      function (error) {
         if (error) {
           console.log("The write failed...");
         } else {
@@ -122,3 +120,13 @@ $("#favorite-button").on("click", function() {
     );
   }
 });
+
+// $("#fav-page").on("click", function () {
+//   if (uid !== "") {
+//     setfavUid(uid);
+
+//   } else {
+//     console.log("Please sign in");
+
+//   }
+// });

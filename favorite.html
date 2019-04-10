@@ -34,7 +34,7 @@
               <a href="#" class="grey-text modal-trigger" data-target="modal-login">Log In</a>
             </li>
             <li class="logged-in">
-              <a href="#" class="grey-text modal-trigger" data-target="modal-favorites">Favorites</a>
+              <a href="/index.html" class="grey-text">Search</a>
             </li>
             <li class="logged-out">
               <a href="#" class="grey-text modal-trigger" data-target="modal-signup">Sign Up</a>
@@ -49,7 +49,7 @@
                <a href="#" class="grey-text modal-trigger" data-target="modal-login">Log In</a>
             </li>
             <li class="logged-in">
-              <a href="#" class="grey-text modal-trigger" data-target="modal-favorites">Favorites</a>
+              <a href="./index.html" class="grey-text">Search</a>
             </li>
             <li class="logged-out">
               <a href="#" class="grey-text modal-trigger" data-target="modal-signup">Sign Up</a>
@@ -150,7 +150,7 @@
     </div> -->
 
     <!--Sign Up Modal-->
-    <!-- <div id="modal-signup" class="modal">
+    <div id="modal-signup" class="modal">
       <div class="modal-content">
         <h4 class="teal-text text-lighten-2 center">Sign Up</h4><br />
         <form id="signup-form">
@@ -167,10 +167,10 @@
           <button class="btn btn-large teal lighten-2 z-depth-0 center">Sign up</button>
         </form>
       </div>
-    </div> -->
+    </div>
 
     <!--Login Modal-->
-    <!-- <div id="modal-login" class="modal">
+    <div id="modal-login" class="modal">
       <div class="modal-content">
         <h4 class="teal-text text-lighten-2 center">Log In</h4>
         <br />
@@ -188,7 +188,32 @@
           <button class="btn btn-large teal lighten-2 z-depth-0 center">Login</button>
         </form>
       </div>
-    </div> -->
+    </div>
+
+    <!---Game Modal-->
+    <div id="game" class="modal">
+      <div class="panel-header">
+        <h4 class="light-blue-text center" id="game-modal-header"></h4>
+      </div>
+      <div class="modal-content">
+        <div class="row">
+          <div class="col s6">
+            <img class="card-image" id="game-image" src="" alt="" />
+            <a class="light-blue waves-effect waves-light btn btn-large" id="favorite-button"><i
+                class="material-icons">favorite_border</i>Favorite</a>
+            <p id="game-description"></p>
+            <br />
+          </div>
+          <div class="col s6">
+            <div class="vids" id="youtube-list"></div>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <a class="light-blue waves-effect waves-light btn btn-large modal-close">Close</a>
+      </div>
+    </div>
+
 
     <footer class="page-footer 0277bd light-blue darken-3">
         <div class="container">
@@ -222,5 +247,7 @@
     <!-- <script src="./assets/javascript/youtubeapi.js"></script> -->
     <!-- Index js -->
     <script src="./assets/javascript/index.js"></script>
+    <!-- Favorite.js -->
+    <script src="./assets/javascript/favorites.js"></script>
   </body>
 </html>
