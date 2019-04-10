@@ -103,12 +103,12 @@ footer.page-footer {
   /* background-color: #FF8000; */
 }
 
-#search {
+#searchBar {
   color: black;
-  position: absolute;
+  
   bottom: 104px;
-  top: auto;
-  margin: auto;
+  margin-top: 190px;
+  
 }
 
 #searchbutton {
@@ -152,13 +152,24 @@ footer.page-footer {
   animation: fadein 0.5s, fadeout 0.5s 2.5s;
 }
 
+::placeholder { 
+  color: black;
+}
+
 @media only screen and (max-width : 992px) {
-  .parallax-container .section #search {
+  .parallax-container .section #searchBar {
     position: absolute;
     top: 40%;
   }
-  #index-banner .section #search {
+  #index-banner .section  {
     top: 10%;
+  }
+  #searchBar {
+    color: black;
+  
+  bottom: 104px;
+  margin-top: 86px;
+  
   }
   
 }
@@ -168,11 +179,11 @@ footer.page-footer {
     top: 0;
   }
   
-  #search {
+  #searchBar {
   top: 250px;
   margin: auto;
-  top: auto;
-  bottom: -84px;
+  
+  
   }
 
 }
