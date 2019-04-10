@@ -8,10 +8,9 @@ function setUid(id) {
   // console.log(uid);
 }
 
+
+
 $(document).ready(function () {
-  // $(".modal").modal({
-  //   onCloseEnd: onModalHide
-  //  });
   $("#modal-login").modal({});
   $("#modal-signup").modal({});
   $("#game").modal({
@@ -122,3 +121,13 @@ $("#favorite-button").on("click", function () {
     );
   }
 });
+
+// $("#fav-page").on("click", function () {
+//   if (uid !== "") {
+//     setfavUid(uid);
+
+//   } else {
+//     console.log("Please sign in");
+
+//   }
+// });
