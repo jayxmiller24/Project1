@@ -12,7 +12,7 @@ signupForm.addEventListener('submit', function () {
             const uid = credential.user.uid;
             console.log(credential.user.uid)
             const modal = document.querySelector('#modal-signup')
-            database.ref('users/' + uid +'contact/').set({
+            database.ref('users/' + uid + 'contact/').set({
                 user_email: email
             },
                 function (error) {
@@ -35,6 +35,9 @@ logOutArray.forEach(function (logout) {
         auth.signOut()
             .then(() => {
                 console.log("user signed out");
+                userLoggedIn = false;
+                console.log(userLoggedIn);
+                
                 $(".logged-out").removeClass("hide");
                 $(".logged-in").addClass("hide");
             });
@@ -49,21 +52,26 @@ loginForm.addEventListener('submit', function () {
     const email = loginForm['login-email'].value;
     const password = loginForm['login-password'].value;
     // console.log(email, password);
-    $(".logged-out").addClass("hide");
-    $(".logged-in").removeClass("hide");
 
     //sign user in
     auth.signInWithEmailAndPassword(email, password)
         .then(function (credential) {
             //  console.log(credential.user.uid);
             var uid = credential.user.uid;
+            userLoggedIn = true;
+            console.log(userLoggedIn);
+            $(".logged-out").addClass("hide");
+            $(".logged-in").removeClass("hide");
             setUid(uid);
             // close login modal and reset form and hide login/ show logOut
             const modal = document.querySelector('#modal-login')
-            // if ( document.URL.contains("favorite.html") ) {
+            if ( window.location.href === "https://jayxmiller24.github.io/Project1/favorite.html" ) {
+                getFavorites();
+            }
+            // if ( window.location.href === "file:///C:/Users/kwbra/OneDrive/School/Bootcamp/Homework/Project1/favorite.html" ) {
             //     getFavorites();
             // }
-            getFavorites();
+            // getFavorites();
             M.Modal.getInstance(modal).close();
             loginForm.reset();
         });

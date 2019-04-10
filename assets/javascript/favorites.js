@@ -4,7 +4,7 @@ function setfavUid(uid) {
 }
 
 
-$(document).ready(function (event) {
+$(document).ready(function () {
 
     console.log(uid);
 

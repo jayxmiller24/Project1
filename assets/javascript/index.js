@@ -1,6 +1,6 @@
 var auth = firebase.auth();
 var database = firebase.database();
-var userLogged = true;
+var userLoggedIn = false;
 var uid = "";
 function setUid(id) {
   uid = id;
