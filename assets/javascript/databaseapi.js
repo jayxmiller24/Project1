@@ -65,9 +65,5 @@ $(document).ready(function () {
       }
     });
   };
-  $("#favorite-button").on("click", function(){
-    $(this).replaceWith("<i class='material-icons'>favorite</i>Favorited</a>");
-
-
-  })
+  
 });
