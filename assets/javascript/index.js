@@ -4,18 +4,19 @@ var userLoggedIn = false;
 var uid = "";
 function setUid(id) {
   uid = id;
-
   // console.log(uid);
 }
 
-
-
 $(document).ready(function () {
+  // Initialize Materialize js
+  $('.sidenav').sidenav();
+  $('.parallax').parallax();
   $("#modal-login").modal({});
   $("#modal-signup").modal({});
   $("#game").modal({
     onCloseEnd: onGameModalHide
   });
+
 });
 
 $(document).on("click", ".card-panel", function () {
@@ -73,61 +74,121 @@ var onGameModalHide = function () {
   $("#game-image").attr("src", "");
   $("#game-description").empty();
   $("#youtube-list").empty();
+  $("#favorite-button").removeClass("hide");
+  $("#saved-button").addClass("hide");
 };
+$("#search-button").on("click", function () {
+  $(".favorites").addClass("hide");
+  $(".search").removeClass("hide");
+  $("#favs-here").empty();
+});
+
+$("#fav-page").on("click", function () {
+  $(".search").addClass("hide");
+  $(".favorites").removeClass("hide");
+  $("#appear-here").empty();
+});
 
 $("#favorite-button").on("click", function () {
   // console.log("on fav click", uid);
-  let query = database.ref("users/" + uid).orderByChild("gameName");
-  let gameName = $("#game-modal-header").text();
-  let gameDeck = $("#game-image").attr("src");
-  let gameDescription = $("#game-description").text();
-  let favArray = [];
-  query.once("value").then(function (snapShot) {
-    snapShot.forEach(function (childSnapShot) {
-      let childGameName = childSnapShot.val().gameName;
-      console.log(childGameName);
-      if (typeof childGameName !== "undefined") {
-        console.log("game has been saved");
-        favArray.push(childGameName);
-      } else {
-        console.log("value is undefined");
-      }
-      console.log(favArray);
-    });
-    gameIsFav();
-  });
-  var gameIsFav = function () {
-    if ($.inArray(gameName, favArray) !== -1) {
-      console.log("Game is a fav");
-    } else {
-      console.log("game is not a fav");
-      addGameToFav();
-    }
-  };
-  function addGameToFav() {
-    database.ref("users/" + uid).push(
-      {
-        gameName: gameName,
-        gameDeck: gameDeck,
-        gameDescription: gameDescription
-      },
-      function (error) {
-        if (error) {
-          console.log("The write failed...");
+  if (userLoggedIn === true) {
+    let query = database.ref("users/" + uid).orderByChild("gameName");
+    let gameName = $("#game-modal-header").text();
+    let gameDeck = $("#game-image").attr("src");
+    let gameDescription = $("#game-description").text();
+    let favArray = [];
+    query.once("value").then(function (snapShot) {
+      snapShot.forEach(function (childSnapShot) {
+        let childGameName = childSnapShot.val().gameName;
+        console.log(childGameName);
+        if (typeof childGameName !== "undefined") {
+          console.log("game has been saved");
+          favArray.push(childGameName);
         } else {
-          console.log("Data saved successfully!");
+          console.log("value is undefined");
         }
+        console.log(favArray);
+      });
+      gameIsFav();
+    });
+    var gameIsFav = function () {
+      if ($.inArray(gameName, favArray) !== -1) {
+        console.log("Game is a fav");
+        displaySnackbar();
+      } else {
+        console.log("game is not a fav");
+        addGameToFav();
       }
-    );
+    };
+    function addGameToFav() {
+      database.ref("users/" + uid).push(
+        {
+          gameName: gameName,
+          gameDeck: gameDeck,
+          gameDescription: gameDescription
+        },
+        function (error) {
+          if (error) {
+            console.log("The write failed...");
+          } else {
+            console.log("Data saved successfully!");
+          }
+        }
+      );
+      $("#favorite-button").addClass("hide");
+      $("#saved-button").removeClass("hide");
+    }
+
+  } else {
+    let message = "Please Login or Signup first..";
+    displaySnackbar(message);
   }
 });
 
-// $("#fav-page").on("click", function () {
-//   if (uid !== "") {
-//     setfavUid(uid);
+$("#fav-page").on("click", function () {
+  getFavorites();
+});
 
-//   } else {
-//     console.log("Please sign in");
+function displaySnackbar(message) {
+  // Get the snackbar DIV
+  var x = $("#snackbar-login");
+  x.text(message);
 
-//   }
-// });
+  // Add the "show" class to DIV
+  x.addClass("show");
+
+  // After 3 seconds, remove the show class from DIV
+  setTimeout(function () {
+    x.removeClass("show");
+  }, 3000);
+}
+
+function getFavorites() {
+  database.ref("users/" + uid).once("value").then(function (snapShot) {
+    snapShot.forEach(function (childSnapShot) {
+      let storedGame = childSnapShot.val();
+      // console.log(storedGame);
+      let gameName = storedGame.gameName;
+      let gameDeck = storedGame.gameDeck;
+      // let gameDeck = gameDeckOBJ.toString();
+      let gameDescription = storedGame.gameDescription;
+
+      //console.log(gameDeck);
+
+      let gameDiv = $("<div class='col s3 card-panel hoverable modal-trigger'>");
+      gameDiv.attr("data-target", "game");
+      let title = $("<h6>").text(gameName);
+      let pThree = $("<p>");
+      $(pThree).text("Description: " + gameDescription);
+      pThree.addClass("card-text truncate");
+      let gameImage = $("<img>");
+      gameImage.attr("src", gameDeck);
+      gameImage.addClass("card-image");
+      gameDiv.append(gameImage);
+      gameDiv.append(title)
+      gameDiv.append(pThree);
+      $("#favs-here").prepend(gameDiv);
+
+    });
+  });
+}
